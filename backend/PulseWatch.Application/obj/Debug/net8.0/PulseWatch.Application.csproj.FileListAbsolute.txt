@@ -1,0 +1,15 @@
+E:\DotNET_Project\backend\PulseWatch.Application\bin\Debug\net8.0\PulseWatch.Application.deps.json
+E:\DotNET_Project\backend\PulseWatch.Application\bin\Debug\net8.0\PulseWatch.Application.dll
+E:\DotNET_Project\backend\PulseWatch.Application\bin\Debug\net8.0\PulseWatch.Application.pdb
+E:\DotNET_Project\backend\PulseWatch.Application\bin\Debug\net8.0\PulseWatch.Domain.dll
+E:\DotNET_Project\backend\PulseWatch.Application\bin\Debug\net8.0\PulseWatch.Domain.pdb
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.csproj.AssemblyReference.cache
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.AssemblyInfoInputs.cache
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.AssemblyInfo.cs
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.csproj.CoreCompileInputs.cache
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWat.3A4157BE.Up2Date
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.dll
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\refint\PulseWatch.Application.dll
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.pdb
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\ref\PulseWatch.Application.dll

@@ -1,0 +1,80 @@
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="logo-icon">◉</span>
+      <span class="logo-text">PulseWatch</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a routerLink="/dashboard" class="nav-item">
+        <span class="nav-icon">📊</span> Dashboard
+      </a>
+      <a routerLink="/api-management" class="nav-item active">
+        <span class="nav-icon">🔗</span> API Management
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-avatar">{{ userName.charAt(0).toUpperCase() }}</span>
+        <span class="user-name">{{ userName }}</span>
+      </div>
+      <button class="btn-logout" (click)="logout()">Sign Out</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="page-header">
+      <div>
+        <h1>API Management</h1>
+        <p>Manage your monitored API endpoints</p>
+      </div>
+      <a routerLink="/api-management/new" class="btn-add">+ Add API</a>
+    </header>
+
+    <div class="loading-state" *ngIf="loading">
+      <div class="spinner"></div>
+      <p>Loading APIs...</p>
+    </div>
+
+    <div class="api-grid" *ngIf="!loading">
+      <div class="empty-state" *ngIf="apis.length === 0">
+        <p>No API endpoints yet.</p>
+        <a routerLink="/api-management/new" class="btn-add-small">+ Add your first API</a>
+      </div>
+
+      <div class="api-card" *ngFor="let api of apis">
+        <div class="api-card-header">
+          <div class="api-card-title">
+            <span class="status-dot" [ngClass]="getStatusClass(api.lastStatus)"></span>
+            <h3>{{ api.name }}</h3>
+          </div>
+          <span class="method-badge">{{ api.httpMethod }}</span>
+        </div>
+
+        <div class="api-card-url">{{ api.url }}</div>
+
+        <div class="api-card-meta">
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="status-text" [ngClass]="getStatusClass(api.lastStatus)">
+              {{ api.lastStatus || 'Pending' }}
+            </span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Response Time</span>
+            <span class="meta-value">{{ api.lastResponseTimeMs !== null ? (api.lastResponseTimeMs + 'ms') : '—' }}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Interval</span>
+            <span class="meta-value">{{ api.checkIntervalSeconds }}s</span>
+          </div>
+        </div>
+
+        <div class="api-card-actions">
+          <a [routerLink]="['/api-detail', api.id]" class="btn-action btn-view">View Details</a>
+          <a [routerLink]="['/api-management', 'edit', api.id]" class="btn-action btn-edit">Edit</a>
+          <button class="btn-action btn-delete" (click)="deleteApi(api.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

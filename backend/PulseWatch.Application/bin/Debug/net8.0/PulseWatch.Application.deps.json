@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PulseWatch.Application/1.0.0": {
+        "dependencies": {
+          "PulseWatch.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PulseWatch.Application.dll": {}
+        }
+      },
+      "PulseWatch.Domain/1.0.0": {
+        "runtime": {
+          "PulseWatch.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PulseWatch.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PulseWatch.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

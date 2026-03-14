@@ -1,0 +1,93 @@
+<div class="detail-page">
+  <div class="detail-container">
+    <a routerLink="/dashboard" class="back-link">← Back to Dashboard</a>
+
+    <div class="loading-state" *ngIf="loading">
+      <div class="spinner"></div>
+      <p>Loading API details...</p>
+    </div>
+
+    <div *ngIf="!loading && apiDetail">
+      <!-- Header -->
+      <div class="detail-header">
+        <div class="detail-title">
+          <span class="status-dot" [ngClass]="getStatusClass()"></span>
+          <h1>{{ apiDetail.name }}</h1>
+        </div>
+        <span class="detail-url">{{ apiDetail.url }}</span>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="detail-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Uptime</div>
+          <div class="kpi-value" [ngClass]="getUptimeClass()">{{ apiDetail.uptimePercentage }}%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Avg Response</div>
+          <div class="kpi-value">{{ apiDetail.avgResponseTimeMs | number:'1.0-0' }}ms</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Status</div>
+          <div class="kpi-value">
+            <span class="status-badge" [ngClass]="getStatusClass()">
+              {{ apiDetail.lastStatus || 'Pending' }}
+            </span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Last Check</div>
+          <div class="kpi-value kpi-time">{{ apiDetail.lastCheckedAt ? (apiDetail.lastCheckedAt | date:'short') : '—' }}</div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Response Time</h3>
+          <div class="chart-wrapper">
+            <canvas id="responseTimeChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card chart-small">
+          <h3>Success vs Failure</h3>
+          <div class="chart-wrapper">
+            <canvas id="successFailChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Logs Table -->
+      <div class="logs-card">
+        <h3>Recent Monitoring Logs</h3>
+        <div class="empty-logs" *ngIf="apiDetail.recentLogs.length === 0">
+          <p>No monitoring logs yet. Checks will appear here shortly.</p>
+        </div>
+        <table *ngIf="apiDetail.recentLogs.length > 0">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Status Code</th>
+              <th>Response Time</th>
+              <th>Result</th>
+              <th>Error</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let log of apiDetail.recentLogs.slice(0, 20)">
+              <td>{{ log.checkedAt | date:'medium' }}</td>
+              <td><span class="code-badge">{{ log.statusCode }}</span></td>
+              <td>{{ log.responseTimeMs }}ms</td>
+              <td>
+                <span class="result-badge" [ngClass]="log.isSuccess ? 'result-success' : 'result-failure'">
+                  {{ log.isSuccess ? 'Success' : 'Failed' }}
+                </span>
+              </td>
+              <td class="error-text">{{ log.errorMessage || '—' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

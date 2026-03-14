@@ -1,0 +1,11 @@
+E:\DotNET_Project\backend\PulseWatch.Domain\bin\Debug\net8.0\PulseWatch.Domain.deps.json
+E:\DotNET_Project\backend\PulseWatch.Domain\bin\Debug\net8.0\PulseWatch.Domain.dll
+E:\DotNET_Project\backend\PulseWatch.Domain\bin\Debug\net8.0\PulseWatch.Domain.pdb
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.AssemblyInfoInputs.cache
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.AssemblyInfo.cs
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.csproj.CoreCompileInputs.cache
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.dll
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\refint\PulseWatch.Domain.dll
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.pdb
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\ref\PulseWatch.Domain.dll

@@ -1,0 +1,116 @@
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="logo-icon">◉</span>
+      <span class="logo-text">PulseWatch</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a routerLink="/dashboard" class="nav-item active">
+        <span class="nav-icon">📊</span> Dashboard
+      </a>
+      <a routerLink="/api-management" class="nav-item">
+        <span class="nav-icon">🔗</span> API Management
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-avatar">{{ userName.charAt(0).toUpperCase() }}</span>
+        <span class="user-name">{{ userName }}</span>
+      </div>
+      <button class="btn-logout" (click)="logout()">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Real-time overview of your monitored APIs</p>
+      </div>
+      <a routerLink="/api-management/new" class="btn-add">+ Add API</a>
+    </header>
+
+    <!-- Alert Banner -->
+    <div class="alerts-section" *ngIf="alerts.length > 0">
+      <div class="alert-item" *ngFor="let alert of alerts.slice(0, 3)">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-msg">{{ alert.message }}</span>
+        <button class="alert-dismiss" (click)="dismissAlert(alert.id)">✕</button>
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div class="loading-state" *ngIf="loading">
+      <div class="spinner"></div>
+      <p>Loading dashboard data...</p>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid" *ngIf="!loading && summary">
+      <div class="kpi-card">
+        <div class="kpi-label">Total APIs</div>
+        <div class="kpi-value">{{ summary.totalApis }}</div>
+        <div class="kpi-icon kpi-total">🔗</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Healthy</div>
+        <div class="kpi-value kpi-healthy-text">{{ summary.healthyApis }}</div>
+        <div class="kpi-icon kpi-healthy">✓</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Unhealthy</div>
+        <div class="kpi-value kpi-unhealthy-text">{{ summary.unhealthyApis }}</div>
+        <div class="kpi-icon kpi-unhealthy">✕</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Avg Response</div>
+        <div class="kpi-value">{{ summary.averageResponseTimeMs | number:'1.0-0' }}ms</div>
+        <div class="kpi-icon kpi-response">⚡</div>
+      </div>
+    </div>
+
+    <!-- API Table -->
+    <div class="api-table-card" *ngIf="!loading">
+      <div class="table-header">
+        <h2>Monitored APIs</h2>
+        <span class="table-count">{{ apis.length }} endpoints</span>
+      </div>
+
+      <div class="empty-state" *ngIf="apis.length === 0">
+        <p>No APIs monitored yet.</p>
+        <a routerLink="/api-management/new" class="btn-add-small">+ Add your first API</a>
+      </div>
+
+      <table *ngIf="apis.length > 0">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Status</th>
+            <th>Response Time</th>
+            <th>Last Check</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let api of apis">
+            <td class="api-name">{{ api.name }}</td>
+            <td class="api-url">{{ api.url }}</td>
+            <td><span class="method-badge">{{ api.httpMethod }}</span></td>
+            <td>
+              <span class="status-badge" [ngClass]="getStatusClass(api.lastStatus)">
+                {{ api.lastStatus || 'Pending' }}
+              </span>
+            </td>
+            <td>{{ api.lastResponseTimeMs !== null ? (api.lastResponseTimeMs + 'ms') : '—' }}</td>
+            <td>{{ api.lastCheckedAt ? (api.lastCheckedAt | date:'short') : '—' }}</td>
+            <td><a [routerLink]="['/api-detail', api.id]" class="btn-view">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
