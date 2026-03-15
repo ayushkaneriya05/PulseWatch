@@ -5,7 +5,7 @@
 **Real-time API health monitoring, uptime tracking, and failure alerting for developers and DevOps teams.**
 
 ![.NET Core](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-21.2-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
@@ -84,7 +84,7 @@ Developers and companies depend on APIs. If an API becomes slow or stops respond
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
 | **Backend API** | ASP.NET Core 8 | RESTful API with Clean Architecture |
-| **Frontend** | Angular 19 | Standalone components, lazy-loaded routes |
+| **Frontend** | Angular 21.2.0 | Standalone components, lazy-loaded routes |
 | **Database** | PostgreSQL 16 | Persistent data storage with EF Core |
 | **ORM** | Entity Framework Core 8 | Database migrations and queries |
 | **Authentication** | JWT Bearer + BCrypt | Secure user authentication |
@@ -193,7 +193,7 @@ PulseWatch/
 │       ├── appsettings.json                # App settings
 │       └── Dockerfile                      # Backend container
 │
-└── frontend/                               # Angular 19 SPA
+└── frontend/                               # Angular 21.2.0 SPA
     ├── Dockerfile                           # Frontend container
     ├── nginx.conf                           # Nginx reverse proxy config
     ├── src/
@@ -238,7 +238,7 @@ PulseWatch/
 | [Docker Desktop](https://www.docker.com/products/docker-desktop/) | Latest | Running all services |
 | [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) | 8.0+ | Backend development |
 | [Node.js](https://nodejs.org/) | 20+ | Frontend development |
-| [Angular CLI](https://angular.io/cli) | 19+ | Frontend development |
+| [Angular CLI](https://angular.io/cli) | 21+ | Frontend development |
 
 ### Option 1: Docker Compose (Recommended)
 
@@ -635,5 +635,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-  <strong>Built with ❤ using .NET 8, Angular 19, and PostgreSQL</strong>
+  <strong>Built with ❤ using .NET 8, Angular 21.2.0, and PostgreSQL 16</strong>
 </div>
