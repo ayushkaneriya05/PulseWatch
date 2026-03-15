@@ -9,3 +9,4 @@ E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.d
 E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\refint\PulseWatch.Domain.dll
 E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.pdb
 E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\ref\PulseWatch.Domain.dll
+E:\DotNET_Project\backend\PulseWatch.Domain\obj\Debug\net8.0\PulseWatch.Domain.sourcelink.json

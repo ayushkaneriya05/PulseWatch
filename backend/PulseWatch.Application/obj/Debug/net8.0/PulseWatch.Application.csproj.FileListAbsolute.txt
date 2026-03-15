@@ -13,3 +13,4 @@ E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.App
 E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\refint\PulseWatch.Application.dll
 E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.pdb
 E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\ref\PulseWatch.Application.dll
+E:\DotNET_Project\backend\PulseWatch.Application\obj\Debug\net8.0\PulseWatch.Application.sourcelink.json

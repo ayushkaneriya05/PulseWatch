@@ -17,3 +17,4 @@ E:\DotNET_Project\backend\PulseWatch.Infrastructure\obj\Debug\net8.0\refint\Puls
 E:\DotNET_Project\backend\PulseWatch.Infrastructure\obj\Debug\net8.0\PulseWatch.Infrastructure.pdb
 E:\DotNET_Project\backend\PulseWatch.Infrastructure\obj\Debug\net8.0\PulseWatch.Infrastructure.genruntimeconfig.cache
 E:\DotNET_Project\backend\PulseWatch.Infrastructure\obj\Debug\net8.0\ref\PulseWatch.Infrastructure.dll
+E:\DotNET_Project\backend\PulseWatch.Infrastructure\obj\Debug\net8.0\PulseWatch.Infrastructure.sourcelink.json

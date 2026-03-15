@@ -265,7 +265,7 @@ docker ps
 
 > **Note:** If you have a local PostgreSQL running on port 5432, the Docker database is mapped to port **5433** to avoid conflicts.
 
-### Option 2: Local Development
+### Option 2: Local Development (With Docker DB)
 
 **1. Start the database:**
 ```bash
@@ -277,7 +277,7 @@ docker-compose up db -d
 cd backend/PulseWatch.API
 dotnet run
 ```
-Backend will start on `http://localhost:5181` (or the port in launchSettings.json).
+Backend will start on `http://localhost:5000`.
 
 **3. Run the frontend:**
 ```bash
@@ -286,6 +286,34 @@ npm install
 npm start
 ```
 Frontend will start on `http://localhost:4200`.
+
+### Option 3: Fully Local Setup (No Docker)
+
+> [!IMPORTANT]
+> This option requires PostgreSQL to be installed natively on your machine.
+
+**1. Database Prerequisites:**
+- Ensure PostgreSQL service is running on your machine (default port `5432`).
+- Create a database named `pulsewatch`.
+- The backend configuration in `appsettings.Development.json` assumes username `postgres` and password `postgres`. Update this file if your credentials differ.
+
+**2. Run the backend:**
+```bash
+cd backend/PulseWatch.API
+dotnet run
+```
+- The application will automatically run migrations and create the schema in your local database.
+- Backend will be available at `http://localhost:5000`.
+- Swagger UI: `http://localhost:5000/swagger`.
+
+**3. Run the frontend:**
+```bash
+cd frontend
+npm install
+npm start
+```
+- Frontend will be available at `http://localhost:4200`.
+- It will automatically connect to the backend on port `5000`.
 
 ### First-Time Setup
 

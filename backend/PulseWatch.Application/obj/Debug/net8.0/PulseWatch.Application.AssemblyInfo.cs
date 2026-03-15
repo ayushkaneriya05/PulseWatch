@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PulseWatch.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f979aa3c6d2b3a4e57ff3f7c32460c94342bf707")]
 [assembly: System.Reflection.AssemblyProductAttribute("PulseWatch.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PulseWatch.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

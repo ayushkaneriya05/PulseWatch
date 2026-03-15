@@ -136,3 +136,4 @@ E:\DotNET_Project\backend\PulseWatch.API\obj\Debug\net8.0\refint\PulseWatch.API.
 E:\DotNET_Project\backend\PulseWatch.API\obj\Debug\net8.0\PulseWatch.API.pdb
 E:\DotNET_Project\backend\PulseWatch.API\obj\Debug\net8.0\PulseWatch.API.genruntimeconfig.cache
 E:\DotNET_Project\backend\PulseWatch.API\obj\Debug\net8.0\ref\PulseWatch.API.dll
+E:\DotNET_Project\backend\PulseWatch.API\obj\Debug\net8.0\PulseWatch.API.sourcelink.json
